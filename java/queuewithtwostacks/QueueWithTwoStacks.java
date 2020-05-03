@@ -26,7 +26,7 @@ public class QueueWithTwoStacks {
         
         if(newItems.isEmpty()){
             if(oldItems.isEmpty()){
-                throw new IllegalStateException("Can't dequeue from an emtpy queue.");
+                throw new IllegalStateException("Can't dequeue from an empty queue.");
             }
             while(!oldItems.isEmpty()){
                 newItems.push(oldItems.pop());

@@ -7,18 +7,37 @@ public class QueueWithTwoStacks {
     Stack<Integer> newItems = new Stack<Integer>();
     Stack<Integer> oldItems = new Stack<Integer>();
 
-    public void enqueue(Integer value){
+    public void enqueue(Integer item){
 
+        //Check if the item received is null. If it is null, then simply return.
+        if(item == null){
+            return;
+        }
+        oldItems.push(item);
     }
 
     public Integer dequeue(){
 
-        return null;
+        shiftItems();
+        return newItems.pop();
+    }
+
+    private void shiftItems(){
+        
+        if(newItems.isEmpty()){
+            if(oldItems.isEmpty()){
+                throw new IllegalStateException("Can't dequeue from an emtpy queue.");
+            }
+            while(!oldItems.isEmpty()){
+                newItems.push(oldItems.pop());
+            }
+        }
     }
 
     public Integer peek(){
 
-        return null;
+        shiftItems();
+        return newItems.peek();
     }
 
     public static void main(String[] args) {

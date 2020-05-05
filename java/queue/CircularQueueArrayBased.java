@@ -1,12 +1,12 @@
 package queue;
 
-public class CircularQueue {
+public class CircularQueueArrayBased {
 
     int capacity, size = 0;
     int front, rear = -1;
     int[] container = null;
 
-    public CircularQueue(int capacity){
+    public CircularQueueArrayBased(int capacity){
 
         this.capacity = capacity;
         this.container = new int[capacity];
@@ -139,7 +139,7 @@ public class CircularQueue {
     public static void main(String[] args) {
         
         System.out.println("Creating an instance of circular queue!");
-        CircularQueue queue = new CircularQueue(10);
+       CircularQueueArrayBased queue = new CircularQueueArrayBased(10);
         
         System.out.println("Enqueue elements.");
         queue.enqueue(10);

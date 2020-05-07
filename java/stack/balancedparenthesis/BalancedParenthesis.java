@@ -1,4 +1,4 @@
-package balancedparenthesis;
+package stack.balancedparenthesis;
 import java.util.Stack;
 
 public class BalancedParenthesis {

@@ -82,22 +82,25 @@ public class RunningMedian {
         System.out.println("Running median for the given array.");
         int[] elements = new int[6];
         int i = 0;
-        Scanner scanner = new Scanner(System.in);
-        
-        while(i < elements.length){
+        try(Scanner scanner = new Scanner(System.in)){
+
+            while(i < elements.length){
             
-            System.out.println("Enter the number to add it to array:");
-            int num = scanner.nextInt();
-            elements[i] = num;
-            i++;
+                System.out.println("Enter the number to add it to array:");
+                int num = scanner.nextInt();
+                elements[i] = num;
+                i++;
+            }
+            
+            System.out.println("Finding running median of the array!");
+            System.out.println("Running median of the given elements array is:");
+            RunningMedian runningMedian = new RunningMedian();
+            double[] medians = runningMedian.getMedians(elements);
+            for (double median : medians) {
+                System.out.print("  " + median);
+            }
         }
         
-        System.out.println("Finding running median of the array!");
-        System.out.println("Running median of the given elements array is:");
-        RunningMedian runningMedian = new RunningMedian();
-        double[] medians = runningMedian.getMedians(elements);
-        for (double median : medians) {
-            System.out.print("  " + median);
-        }
+        
     }
 }

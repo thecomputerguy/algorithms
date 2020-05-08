@@ -1,7 +1,5 @@
 package heap.minheap;
 
-import java.util.Scanner;
-
 public class MinHeap {
 
     int[] container = null;

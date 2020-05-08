@@ -1,6 +1,4 @@
 package searching.linearsearch;
-
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class LinearSearch {

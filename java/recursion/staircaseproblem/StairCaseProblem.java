@@ -19,9 +19,8 @@ public class StairCaseProblem {
 
             return 1;
         } 
-        
-        return countPaths(steps-1) + countPaths(steps - 2) + countPaths(steps - 3);
 
+        return countPaths(steps-1) + countPaths(steps - 2) + countPaths(steps - 3);
     }
 
     public static void main(String[] args) {

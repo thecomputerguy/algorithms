@@ -1,11 +1,11 @@
-package bfs.shortesreachproblem;
+package bfs.shortestreachproblem;
 
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Set;
 
-public class ShortesReachProblem {
+public class ShortestReachProblem {
 
     public static int[] shortestReach(int startId) {
 

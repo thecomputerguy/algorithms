@@ -12,7 +12,7 @@ public class ReverseLinkedList {
 
         
         Node current = head;
-        //Reverse the list here.
+        //Reverse the list here. O(n) linear time solution
         Node prev = null;
         while(current != null){
             Node next = current.next;

@@ -8,7 +8,7 @@ public class MaximumDepthOfBinaryTree {
     public int maxDepth(Node node){
 
         if(node == null) return 0;
-        int depth = 1;
+        int depth = 0;
         Queue<Node> queue = new LinkedList<>();
         queue.offer(node);
 

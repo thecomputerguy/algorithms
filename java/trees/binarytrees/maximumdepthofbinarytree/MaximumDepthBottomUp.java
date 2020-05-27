@@ -19,7 +19,7 @@ public class MaximumDepthBottomUp {
     public static void main(String[] args) {
         
         System.out.println("Maximum depth of a binary tree solution.");
-        MaximumDepthTopDown tree = new MaximumDepthTopDown();
+        MaximumDepthBottomUp tree = new MaximumDepthBottomUp();
         System.out.println("Creating a tree.");
         Node root = new Node(1);
         root.left = new Node(2);

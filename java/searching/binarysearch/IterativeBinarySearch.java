@@ -5,27 +5,33 @@ import java.util.Scanner;
 
 public class IterativeBinarySearch {
 
-    public int search(int element, int[] data){
+    public int search(int target, int[] data){
 
+        if(data == null || data.length == 0) return -1;
         int left = 0;
-        int right = data.length;
+        int right = data.length-1;
+
 
         while(left <= right){
 
-        int mid = (right+left)/2;
+        //To prevent integer overflow in java.
+       int mid = left + (right - left) / 2;
+       //Alternatively, we can do this way as well
+       //int mid = (left + (right - left)) >> 2;
 
-        if(element == data[mid]){
+            if(data[mid] == target){
 
-            return mid;
-        }else if(element < data[mid]){
+                return mid;
+            }
+            else if(data[mid] > target){
 
-            right = mid - 1;
-        }else if(element > data[mid]){
+                right = mid - 1;
+            } 
+            else{
 
-            left = mid+1;
-        }
-
-    }
+                left = mid + 1;
+            } 
+        }   
 
         return -1;
     }

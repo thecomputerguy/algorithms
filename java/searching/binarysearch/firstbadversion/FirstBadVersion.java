@@ -30,6 +30,6 @@ public class FirstBadVersion {
     public static void main(String[] args) {
         FirstBadVersion version  = new FirstBadVersion();
         int badVersion = version.firstBadVersion(10);
-        System.out.println("First bad version.");
+        System.out.println("First bad version." + badVersion);
     }
 }

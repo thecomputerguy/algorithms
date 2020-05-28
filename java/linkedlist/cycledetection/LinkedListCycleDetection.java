@@ -315,23 +315,16 @@ public class LinkedListCycleDetection {
 
     public boolean containsCycle(){
         
-        if(this.head == null){
+       if(this.head == null) return false;
 
-            return false;
-        }
+       Node slow = this.head;
+       Node fast = this.head.next;
 
-        Node slow = this.head;
-        Node fast = this.head.next;
-
-        while(fast != null && fast.next != null && slow != null){
-
-            if(slow == fast){
-
-                return true;
-            }
-            slow = slow.next;
+       while(fast != null && fast.next != null && slow != null){
+            if(slow == fast) return true;
+            slow  = slow.next;
             fast = fast.next.next;
-        }
+       }
 
         return false;
     }

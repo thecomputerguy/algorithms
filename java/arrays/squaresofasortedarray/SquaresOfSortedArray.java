@@ -6,20 +6,45 @@ public class SquaresOfSortedArray {
 
         if(data == null || data.length == 0) return data;
         
-        int left = 0;
-        int right = data.length - 1;
+        int negativePointer = 0;
+        int positivePointer = 0;
+        int N = data.length;
+        int[] sortedSquares = new int[data.length];
 
-        while(left <= right){
-            if(Math.abs(data[left]) <= Math.abs(data[right])){
-                data[left] = data[left] * data[left];
-                left++;
+        //skip over all the negative elements in the beginning of the array.
+        while(positivePointer < N && data[positivePointer] < 0){
+            positivePointer++;
+        }
+
+        //point to the biggest negative element.
+        negativePointer = positivePointer - 1;
+        int counter = 0;
+        while(negativePointer >= 0 && positivePointer < N){
+            if(data[negativePointer] * data[negativePointer] < data[positivePointer] * data[positivePointer]){
+                sortedSquares[counter] = data[negativePointer] * data[negativePointer];
+                negativePointer--;
+                counter++;
             }else{
-                data[right] = data[right] * data[right];
-                right++;
+                sortedSquares[counter] = data[positivePointer] * data[positivePointer];
+                positivePointer++;
+                counter++;
             }
         }
 
-        return data;
+        while(negativePointer >= 0){
+            sortedSquares[counter] = data[negativePointer] * data[negativePointer];
+            negativePointer--;
+            counter++;
+        }
+
+        while(positivePointer < N){
+            sortedSquares[counter] = data[positivePointer] * data[positivePointer];
+            positivePointer++;
+            counter++;
+        }
+      
+
+        return sortedSquares;
     }
 
     public void print(int[] data){

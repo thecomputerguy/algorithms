@@ -1,9 +1,9 @@
-package trees.binarytrees.leftmostnode;
+package trees.binarytrees.bottomlefttreevalue;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class LeftMostNode {
+public class BottomLeftTreeValue {
 
     public Node findLeftMostNode(Node root){
 
@@ -22,7 +22,7 @@ public class LeftMostNode {
     
     public static void main(String[] args) {
         
-        LeftMostNode leftMostNode = new LeftMostNode();
+        BottomLeftTreeValue leftMostNode = new BottomLeftTreeValue();
 
         System.out.println("Creating a tree.");
         Node root = new Node(1);

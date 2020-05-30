@@ -1,4 +1,4 @@
-package trees.maxvalueineachrow;
+package trees.binarytrees.maxvalueineachrow;
 
 import java.util.ArrayList;
 import java.util.List;

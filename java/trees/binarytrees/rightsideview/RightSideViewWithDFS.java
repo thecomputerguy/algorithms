@@ -3,7 +3,7 @@ package trees.binarytrees.rightsideview;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RightSideView {
+public class RightSideViewWithDFS {
     
     public List<Integer> rightSideView(Node root){
         
@@ -28,7 +28,7 @@ public class RightSideView {
     }
 
     public static void main(String[] args) {
-        RightSideView view = new RightSideView();
+        RightSideViewWithDFS view = new RightSideViewWithDFS();
 
         System.out.println("Construct a binary tree");
         Node root1 = new Node(20);

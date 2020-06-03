@@ -3,7 +3,7 @@ package arrays.mountainarray;
 public class MountainArrayUsingBinarySearch {
     
     public int search(int data[]){
-        if(data == null || data.length == 0) return Integer.MIN_VALUE;
+        if(data == null || data.length < 3) return Integer.MIN_VALUE;
         int left = 0;
         int right = data.length-1;
         while(left < right){

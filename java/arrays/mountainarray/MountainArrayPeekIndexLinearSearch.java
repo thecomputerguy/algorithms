@@ -3,7 +3,7 @@ package arrays.mountainarray;
 public class MountainArrayPeekIndexLinearSearch {
     
     public int search(int[] data){
-        if(data == null || data.length == 0) return Integer.MIN_VALUE;
+        if(data == null || data.length < 3) return Integer.MIN_VALUE;
         
         for(int i = 0; i < data.length - 1; i++){
             if(data[i] > data[i+1]) return data[i];

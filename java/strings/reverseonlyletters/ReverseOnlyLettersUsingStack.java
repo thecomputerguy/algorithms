@@ -2,7 +2,7 @@ package strings.reverseonlyletters;
 
 import java.util.Stack;
 
-public class ReverseOnlyLetters {
+public class ReverseOnlyLettersUsingStack {
     
 
     public String reverse(String data){
@@ -29,7 +29,7 @@ public class ReverseOnlyLetters {
 
     public static void main(String[] args) {
 
-        ReverseOnlyLetters reverseOnlyLetters = new ReverseOnlyLetters();
+        ReverseOnlyLettersUsingStack reverseOnlyLetters = new ReverseOnlyLettersUsingStack();
         String data = "a-jb-jan-van-rafd";
         String reversed = reverseOnlyLetters.reverse(data);
         System.out.println(reversed);

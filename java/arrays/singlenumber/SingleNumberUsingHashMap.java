@@ -3,7 +3,7 @@ package arrays.singlenumber;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SingleNumber {
+public class SingleNumberUsingHashMap {
     
     public int findSingleNumber(int[] data){
         
@@ -28,7 +28,7 @@ public class SingleNumber {
 
     public static void main(String[] args) {
         System.out.println("Single number solution.");
-        SingleNumber singleNumber = new SingleNumber();
+        SingleNumberUsingHashMap singleNumber = new SingleNumberUsingHashMap();
         int[] data = new int[]{4, 1, 2, 1 , 2};
         int number = singleNumber.findSingleNumber(data);
         System.out.println("Single Number " + number);

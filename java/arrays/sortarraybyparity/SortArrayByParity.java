@@ -5,7 +5,7 @@ public class SortArrayByParity {
     public int[] sort(int[] data){
         if(data == null || data.length == 0) return data;
         //use two pointer approach. even pointer in the beginning and odd pointer in the end.
-        //swap the odd elements in the beginning with the odd elements in the end.
+        //swap the odd elements in the beginning with even elements in the end.
         int evenPointer = 0;
         int oddPointer = data.length-1;
 

@@ -11,18 +11,12 @@ public class SortArrayByParity {
 
         while(evenPointer < oddPointer){
 
-            while(data[evenPointer] % 2 == 0){
-                evenPointer++;
+            if(data[evenPointer] % 2 > data[oddPointer] % 2){
+                swap(data, evenPointer, oddPointer);
             }
 
-            while(data[oddPointer] % 2 == 1){
-                oddPointer--;
-            }
-
-            //Now both the pointers are at the position where we can swap elements so swap.
-            swap(data, evenPointer, oddPointer);
-            evenPointer++;
-            oddPointer--;
+            if(data[evenPointer] % 2 == 0) evenPointer++;
+            if(data[oddPointer] % 2 == 1) oddPointer--;
         }
 
         return data;

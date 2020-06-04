@@ -3,12 +3,12 @@ package twodimensionalarray;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SpriralMatrix {
+public class SpiralMatrix {
     
     public List<Integer> spriralMatrix(int[][] data){
         List<Integer> result = new ArrayList<>();
         
-        if(data == null || data.length == 0) return result;
+        if(data == null || data.length == 0) return result; 
 
         int rowBegin = 0;
         int rowEnd = data.length-1;
@@ -43,7 +43,7 @@ public class SpriralMatrix {
 
     public static void main(String[] args) {
         System.out.println("Spiral matrix solution.");
-        SpriralMatrix matrix = new SpriralMatrix();
+        SpiralMatrix matrix = new SpiralMatrix();
 
         int[][] data = new int[][]{{1, 2, 3, 4, 5},{6, 7, 8, 9, 10},{11, 12, 13, 14, 15}, {16, 17, 18, 19, 20}};
         List<Integer> spriral = matrix.spriralMatrix(data);

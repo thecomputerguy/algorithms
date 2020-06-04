@@ -13,15 +13,15 @@ public class UniqueEmails {
 
         for (String email : emails) {
             //Apply rules.
-            String[] splitEmail = email.split("@");
-            String localName = splitEmail[0];
-            String domainName = splitEmail[1];
+            int splitPosition = email.indexOf("@");
+            String localName = email.substring(0, splitPosition);
+            String domainName = email.substring(splitPosition);
             int indexOfPlus = localName.indexOf("+");
             if(indexOfPlus >= 0){
                 localName = localName.substring(0, indexOfPlus);
             }
             localName = localName.replaceAll("\\.", "");
-            String uniqueEmail = localName + "@" + domainName;
+            String uniqueEmail = localName + domainName;
             uniqueEmails.add(uniqueEmail);
         }
 

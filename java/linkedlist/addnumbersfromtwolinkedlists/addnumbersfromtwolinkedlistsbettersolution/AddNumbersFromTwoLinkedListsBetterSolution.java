@@ -1,4 +1,4 @@
-package linkedlist.addnumbersfromtwolinkedlistsbettersolution;
+package linkedlist.addnumbersfromtwolinkedlists.addnumbersfromtwolinkedlistsbettersolution;
 
 public class AddNumbersFromTwoLinkedListsBetterSolution {
     

@@ -1,4 +1,4 @@
-package twodimensionalarray;
+package twodimensionalarray.spiralmatrix;
 
 import java.util.ArrayList;
 import java.util.List;

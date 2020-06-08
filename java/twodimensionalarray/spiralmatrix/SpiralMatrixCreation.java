@@ -1,4 +1,4 @@
-package twodimensionalarray;
+package twodimensionalarray.spiralmatrix;
 
 import java.util.Scanner;
 
@@ -10,7 +10,6 @@ public class SpiralMatrixCreation {
         int rows = n;
         int columns = n;
         int[][] spiralMatrix = new int[rows][columns];
-        int numOfElements = rows * columns;
         int counter = 0;
         int rowStart = 0;
         int rowEnd = rows-1;

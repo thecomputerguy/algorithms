@@ -2,7 +2,7 @@ import java.util.*
 
 fun isValidPalindrome(data: String): Boolean {
     if (data == null || data.isEmpty()) return false
-    //iterate ove the characters from front to end and compare the characters.
+    //iterate ove the characters while start is less than or equal to end and compare the characters.
     var start: Int = 0;
     var end: Int = data.length-1;
     while (start <= end){

@@ -15,7 +15,7 @@ fun minSizeSubArraySum(s:Int, data: IntArray): Int  {
         }
     }
 
-    return minSize
+    return if(minSize == Int.MAX_VALUE)  0 else minSize
 }
 
 fun main(args: Array<String>) {

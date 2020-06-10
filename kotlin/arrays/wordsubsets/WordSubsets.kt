@@ -1,24 +1,24 @@
 fun wordSubsets(input1: Array<String>, input2: Array<String>): List<String> {
     val result = mutableListOf<String>()
-    if(input1 == null || input1.isEmpty() || input2 == null || input2.isEmpty()) return result;
+    if (input1 == null || input1.isEmpty() || input2 == null || input2.isEmpty()) return result;
 
     val charCount: IntArray = IntArray(26)
     buildCharCount(charCount, input2)
 
-    for(data in input1){
+    for (data in input1) {
 
         val wordCharacterCount: IntArray = IntArray(26)
         buildCharCount(wordCharacterCount, data)
         var index: Int = 0;
 
-        for(value in charCount){
-           
+        for (value in charCount) {
+
             val count: Int = wordCharacterCount[index]
-            if(value > count) break
+            if (value > count) break
             index++
         }
 
-        if(index == 26){
+        if (index == 26) {
             result.add(data)
         }
     }
@@ -27,19 +27,18 @@ fun wordSubsets(input1: Array<String>, input2: Array<String>): List<String> {
     return result;
 }
 
-fun buildCharCount(mapping: IntArray , input1: String): Unit{
+fun buildCharCount(mapping: IntArray, input1: String): Unit {
 
-    for(ch in input1){
+    for (ch in input1) {
         val key: Int = ch - 'a'
         mapping[key] = mapping[key] + 1
     }
 }
 
-fun buildCharCount(mapping: IntArray , input2: Array<String>): Unit{
+fun buildCharCount(mapping: IntArray, input2: Array<String>): Unit {
 
-    for(ch in input2){
-        val key: Int = ch.get(0) - 'a'
-        mapping[key] = mapping[key] + 1
+    for (word in input2) {
+        buildCharCount(mapping, word)
     }
 }
 

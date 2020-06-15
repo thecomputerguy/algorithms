@@ -24,10 +24,10 @@ class TicTacToe(val n: Int) {
         rowSum[row] = rowSum[row] + playerValue
         colSum[col] = colSum[col] + playerValue
         
-        if(diagonalSum == n ||
-            antiDiagonalSum == n ||
-            rowSum[row] == n ||
-            colSum[col] == n){
+        if(Math.abs(diagonalSum) == n ||
+            Math.abs(antiDiagonalSum) == n ||
+            Math.abs(rowSum[row]) == n ||
+            Math.abs(colSum[col]) == n){
                 println("diagonalSum: $diagonalSum antidiagonalSum: $antiDiagonalSum rowSum: $rowSum[row] and colSum: $colSum[col]")
                 return player
         }

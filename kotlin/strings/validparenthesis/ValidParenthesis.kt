@@ -11,7 +11,7 @@ fun isValid(data: String): Boolean{
             else -> return false
         }
     }
-    return true
+    return stack.isEmpty()
 }
 
 fun isValid(stack: java.util.Stack<Char>, char: Char): Boolean{

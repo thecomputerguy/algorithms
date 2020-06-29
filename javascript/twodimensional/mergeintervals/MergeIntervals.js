@@ -1,5 +1,8 @@
 function mergeIntervals(intervals){
     if(!intervals || intervals.length < 2 || intervals[0].length < 2) return intervals
+    
+    intervals.sort((arr1, arr2) => arr1[0] - arr2[0])
+
     let result = []
     let currentInterval = intervals[0]
     result.push(currentInterval)

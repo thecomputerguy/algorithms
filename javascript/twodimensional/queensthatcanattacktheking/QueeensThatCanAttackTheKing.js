@@ -3,12 +3,12 @@ function queensThatCanAttack(king, seen, result){
     for (let dx of directions) {
         for (let dy of directions) {
             if(dx === 0 && dy === 0) continue
-            let [kingRow, kingCol] = king
-            while(kingRow+dx >= 0 && kingRow+dx < seen.length && kingCol+dy >= 0 && kingCol+dy < seen[kingRow+dx].length){
-                kingRow += dx
-                kingCol += dy
-                if(seen[kingRow][kingCol]){
-                    result.push([kingRow, kingCol])
+            let [row, col] = king
+            while(row+dx >= 0 && row+dx < seen.length && col+dy >= 0 && col+dy < seen[row+dx].length){
+                row += dx
+                col += dy
+                if(seen[row][col]){
+                    result.push([row, col])
                     break
                 }
             }

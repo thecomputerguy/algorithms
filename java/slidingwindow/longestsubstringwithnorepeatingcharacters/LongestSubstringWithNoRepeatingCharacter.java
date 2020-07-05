@@ -5,6 +5,8 @@ import java.util.*;
 public class LongestSubstringWithNoRepeatingCharacter {
 
     public static int findLength(String str) {
+        if (str == null || str.length() == 0)
+            return 0;
         int winStart = 0;
         int maxLength = Integer.MIN_VALUE;
         Map<Character, Integer> holder = new HashMap<>();

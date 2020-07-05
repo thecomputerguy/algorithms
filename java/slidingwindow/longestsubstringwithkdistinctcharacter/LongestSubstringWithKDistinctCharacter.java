@@ -9,27 +9,18 @@ public class LongestSubstringWithKDistinctCharacter {
             return 0;
         int winStart = 0;
         int maxLength = Integer.MIN_VALUE;
-        int uniqueChars = 0;
         Map<Character, Integer> map = new HashMap<>();
         for (int winEnd = 0; winEnd < str.length(); winEnd++) {
 
             char charAtWinEnd = str.charAt(winEnd);
 
-            if (map.containsKey(charAtWinEnd)) {
-                map.put(charAtWinEnd, map.get(charAtWinEnd) + 1);
-            } else {
-                uniqueChars++;
-                map.put(charAtWinEnd, 1);
-            }
+            map.put(charAtWinEnd, map.getOrDefault(charAtWinEnd, 0) + 1);
 
-            while (uniqueChars > k) {
-                uniqueChars--;
+            while (map.size() > k) {
                 char charAtWinStart = str.charAt(winStart);
-                if (map.get(charAtWinStart) > 1) {
-                    map.put(charAtWinStart, map.get(charAtWinStart) - 1);
-                } else if (map.get(charAtWinStart) == 1) {
+                map.put(charAtWinStart, map.get(charAtWinStart) - 1);
+                if (map.get(charAtWinStart) == 0)
                     map.remove(charAtWinStart);
-                }
                 winStart++;
             }
             maxLength = Math.max(maxLength, winEnd - winStart + 1);

@@ -1,8 +1,8 @@
-package slidingwindow.longestsubstringwithkdistinctcharacters;
+package slidingwindow.longestsubstringwithkdistinctcharacter;
 
 import java.util.*;
 
-public class LongestSubstringWithKDistinctCharacters {
+public class LongestSubstringWithKDistinctCharacter {
 
     public static int findLength(String str, int k) {
         int winStart = 0;

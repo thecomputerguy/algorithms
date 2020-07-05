@@ -5,6 +5,8 @@ import java.util.*;
 class FruitsInTheBasket {
 
     public static int findLength(char[] arr) {
+        if (arr == null || arr.length == 0)
+            return 0;
         int maxFruits = Integer.MIN_VALUE;
         int winStart = 0;
         Map<Character, Integer> map = new HashMap<Character, Integer>();

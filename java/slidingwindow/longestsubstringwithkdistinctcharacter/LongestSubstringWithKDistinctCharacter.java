@@ -5,6 +5,8 @@ import java.util.*;
 public class LongestSubstringWithKDistinctCharacter {
 
     public static int findLength(String str, int k) {
+        if (str == null || str.length() == 0 || str.length() < k)
+            return 0;
         int winStart = 0;
         int maxLength = Integer.MIN_VALUE;
         int uniqueChars = 0;

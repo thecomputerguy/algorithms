@@ -10,13 +10,13 @@ public class SquaringASortedArray {
         int right = arr.length - 1;
         int index = arr.length - 1;
         while (left <= right) {
-            int leftSquared = arr[left] * arr[left];
-            int rightSquared = arr[right] * arr[right];
-            if (leftSquared >= rightSquared) {
-                squares[index] = leftSquared;
+            int leftSquare = arr[left] * arr[left];
+            int rightSquare = arr[right] * arr[right];
+            if (leftSquare >= rightSquare) {
+                squares[index] = leftSquare;
                 left++;
             } else {
-                squares[index] = rightSquared;
+                squares[index] = rightSquare;
                 right--;
             }
             index--;

@@ -7,6 +7,7 @@ public class TripletSumCloseToTarget {
     public static int searchTriplet(int[] arr, int targetSum) {
         if (arr == null || arr.length < 3)
             return -1;
+        Arrays.sort(arr);
         int smallestDiff = Integer.MAX_VALUE;
         for (int index = 0; index < arr.length - 2; index++) {
             int left = 0;

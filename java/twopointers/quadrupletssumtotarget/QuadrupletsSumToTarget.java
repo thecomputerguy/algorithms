@@ -13,7 +13,7 @@ public class QuadrupletsSumToTarget {
             if (i > 0 && arr[i] == arr[i - 1])
                 continue;
             for (int j = i + 1; j < arr.length - 2; j++) {
-                if (j > 1 && arr[j] == arr[j - 1])
+                if (j > i + 1 && arr[j] == arr[j - 1])
                     continue;
                 findPair(arr, i, j, target, quadruplets);
             }

@@ -14,7 +14,7 @@ public class LengthOfACycle {
                 return lengthOfACycle(slow);
             }
         }
-        return -1;
+        return 0;
     }
 
     public static int lengthOfACycle(ListNode node) {
